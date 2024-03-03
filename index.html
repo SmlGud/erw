@@ -8,7 +8,7 @@
    <body>
        <h1 align=" center">Авторская экскурсия по Санкт-Петербургу</h1>
        <img src="Images/1.png"  alt="tom" width="895" height="502">
-         <p>Откройте для себя великолепие Санкт-Петербурга с нашими увлекательными экскурсиями. 
+        <p>Откройте для себя великолепие Санкт-Петербурга с нашими увлекательными экскурсиями. 
            Погрузитесь в богатую культуру и архитектуру, посетите известные достопримечательности. 
            Наши экскурсии созданы, чтобы показать вам самое лучшее, что Санкт-Петербург 
            готов предложить.
@@ -18,47 +18,79 @@
         <p>Приглашаем погрузиться в историю, культуру и великолепие Санкт-Петербурга.</p>
         <p> <b>На наших экскурсиях вас ждут:</b></p>
         
-       <ol>
+        <ol>
            <li>Профессиональный гид.</li>
            <li>Уникальные маршруты.</li>
            <li>Комфортный трансфер.</li>
            <li>Прогулка по каналам.</li>
            <li>Лучшие фотолокации.</li>
            <li>Прогулки по крышам.</li>
-       </ol>
+        </ol>
 
 
        
-       <h2>Кому подойдет экскурсия?</h2>
+        <h2>Кому подойдет экскурсия?</h2>
         <img src="Images/18.png"  alt="tem" width="895" height="502">
        
-       <ul>
+        <ul>
            <li>Организованным группам от 15 или 16 человек.</li>
            <li>Индивидуальным путешественникам.</li>
            <li>Компаниям друзей.</li>
            <li>Семьям с детьми старше 12 лет.</li>
-       </ul> 
+        </ul> 
        <table width="auto">
-        <tr>
+          <tr>
             <th width="200px">Тариф</th>
             <th width="300px">группа</th>
-        </tr>
-         <tr>
+          </tr>
+          <tr>
             <td width="200px">Эконом
             </td>
             <td width="300px">от 15 человек
             </td>
 
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td width="200px">Комфорт
             </td>
             <td width="300px">от 7 человек
             </td>
-        </tr>
+          </tr>
 
        </table>
+       <form>
 
+        <Ul>
+            <li>
+                <input type="checkbox" name="services" value="transfer" data-price="100">  
+                <label>Трансфер до места начала экскурсии</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="disabled_transfer" data-price="100">
+                <label>Трансфер для маломобильных групп населения </label>
+            </li>
+            <br>
+            
+        </Ul>
+         
+       </form>
+       <p2 id="total-price">Сумма: 0 рублей</p2>
+          <script>
+            const checkboxes = document.querySelectorAll('input [name="services"]');
+            const totalPriceElement = document.getElementById('total-price');
+
+            checkboxes.forEach (checkbox => {
+            checkbox.addEventListener('change',() => {
+                let totalPrice = 0;
+                checkboxes.forEach (checkbox => {
+                if (checkbox.checked) {
+                    totalPrice += parseInt(checkbox.getAttribute('data-price'));
+                }
+                });
+                totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`;
+            });
+            });
+          </script>
        <h2>Отзывы клиентов</h2>
        <blockquote>
         Спасибо за незабываемую экскурсию!
@@ -89,8 +121,6 @@
        <form>
         <Input type="text" placeholder="имя" id="" name=""><br>
         <Input type="text" placeholder="фамилия" ><br>
-        <Input type="text" placeholder="имя" ><br>
-        <Input type="text" placeholder="имя" ><br>
             <button type="submit">отправить</button>
 
        </form>
@@ -98,8 +128,6 @@
         <label for="tariff">выберите тариф</label>
         <option value="economy">Эконом</option>
         <option value="comfort">Комфорт</option>
-        <option value="economy">Эконом</option>
-        <option value="economy">Эконом</option>
        </select>
        <br>
        <a href="https://t.me/edusondaily" >Свяжитесь с автором экскурсии</a>
