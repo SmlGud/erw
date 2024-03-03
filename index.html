@@ -5,7 +5,7 @@
       </title>
       <meta charset="utf-8">
    </head>
-   <body>
+   <body style="margin: 50px" >
        <h1 align=" center">Авторская экскурсия по Санкт-Петербургу</h1>
        <img src="Images/1.png"  alt="tom" width="895" height="502">
         <p>Откройте для себя великолепие Санкт-Петербурга с нашими увлекательными экскурсиями. 
@@ -38,6 +38,10 @@
            <li>Компаниям друзей.</li>
            <li>Семьям с детьми старше 12 лет.</li>
         </ul> 
+        <h2>Какие есть тарифы?</h2>
+        <p>
+            
+        </p>
        <table width="auto">
           <tr>
             <th width="200px">Тариф</th>
@@ -76,11 +80,11 @@
        </form>
        <p2 id="total-price">Сумма: 0 рублей</p2>
           <script>
-            const checkboxes = document.querySelectorAll('input [name="services"]');
+            const checkboxes = document.querySelectorAll('input[name="services"]');
             const totalPriceElement = document.getElementById('total-price');
 
             checkboxes.forEach (checkbox => {
-            checkbox.addEventListener('change',() => {
+            checkbox.addEventListener('change', () => {
                 let totalPrice = 0;
                 checkboxes.forEach (checkbox => {
                 if (checkbox.checked) {
@@ -91,6 +95,8 @@
             });
             });
           </script>
+          
+          
        <h2>Отзывы клиентов</h2>
        <blockquote>
         Спасибо за незабываемую экскурсию!
