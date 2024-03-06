@@ -50,6 +50,7 @@ color:#800000
 	font-size: 40 px;
 	font-weight: 700;
 }
+
 .program-image {
     object-fit: cover;
 }
@@ -147,7 +148,7 @@ color:#800000
 .contacts-btn{
 	position: relative;
     justify-content: space-between;
-	color: #fff;
+	color: rgb(100, 37, 37);
 	font-size: 40px;
 	font-weight: 700;
 	text-decoration: none;
@@ -193,6 +194,7 @@ color:#800000
 .card-image-title {
     font-size: 16px;
     font-weight: 400;
+	color: rgb(139, 112, 35);
 }
 
 .card-image-title a {
