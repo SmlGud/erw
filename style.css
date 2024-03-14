@@ -9,6 +9,17 @@
 
 	
 }
+.navbar-list{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.navbar-item:not(:last-child){
+	margin-right: 10px;
+}
 
 .container{
 
